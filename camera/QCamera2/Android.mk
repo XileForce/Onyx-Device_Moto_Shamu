@@ -31,11 +31,11 @@ LOCAL_SRC_FILES += \
         HAL/QCameraParameters.cpp \
         HAL/QCameraThermalAdapter.cpp
 
-LOCAL_CFLAGS := -Wall -Werror
-LOCAL_CFLAGS += -DHAS_MULTIMEDIA_HINTS
+LOCAL_CFLAGS := -Wall -Werror -fno-strict-aliasing
+LOCAL_CFLAGS += -DHAS_MULTIMEDIA_HINTS -fno-strict-aliasing
 
 #HAL 1.0 Flags
-LOCAL_CFLAGS += -DDEFAULT_DENOISE_MODE_ON -DHAL3 -DVANILLA_HAL
+LOCAL_CFLAGS += -DDEFAULT_DENOISE_MODE_ON -DHAL3 -DVANILLA_HAL -fno-strict-aliasing
 
 LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/stack/common \
